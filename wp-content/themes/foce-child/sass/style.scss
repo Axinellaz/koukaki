@@ -1,7 +1,7 @@
 .scrolled-top{
      opacity: 0;
     transform: translateY(50px);
-    animation: scroll-in 3s forwards;
+    animation: scroll-in 2s forwards;
 }
 
 @keyframes scroll-in {
@@ -18,7 +18,7 @@
 .scrolled-down{
     opacity: 0;
     transform: translateY(-150px);
-    animation: scroll-down 3s forwards;
+    animation: scroll-down 2s forwards;
 }
 
 @keyframes scroll-down {
@@ -34,7 +34,7 @@
 
 // Rotation fleurs
 
-.rotation{
+.story__article::after{
     animation: rotate 3s linear infinite;
 }
 
@@ -43,3 +43,22 @@
         transform: rotate(360deg);
     }
 }
+
+//     ANIMATION  TITRE 
+/*
+.scrolled-title{
+    opacity: 0;
+    animation: scroll-title 2s;
+}
+
+@keyframes scroll-title {
+    0%{
+        opacity: 0;
+        transform: translate(0px);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(60px)
+    }
+}
+*/
