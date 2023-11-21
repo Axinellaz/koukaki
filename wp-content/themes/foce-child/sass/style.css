@@ -1,0 +1,41 @@
+.scrolled-top {
+  opacity: 0;
+  transform: translateY(50px);
+  animation: scroll-in 3s forwards;
+}
+
+@keyframes scroll-in {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.scrolled-down {
+  opacity: 0;
+  transform: translateY(-150px);
+  animation: scroll-down 3s forwards;
+}
+
+@keyframes scroll-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-150px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.rotation {
+  animation: rotate 3s linear infinite;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}/*# sourceMappingURL=style.css.map */
