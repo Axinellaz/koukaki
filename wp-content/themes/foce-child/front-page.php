@@ -2,10 +2,13 @@
 
 get_header();
 ?>
-
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <main id="primary" class="site-main">
         <section class="banner">
-            <img src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?> " alt="logo Fleurs d'oranger & chats errants">
+            <img class="video__img-txt floating" src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?> " alt="logo Fleurs d'oranger & chats errants">
+            <video id="background-video"  autoplay loop muted src="<?php echo get_stylesheet_directory_uri() . './video-back-header/video-back-header-koukaki.mp4'; ?> " data-bottom-top="transform:translate3d(0px, 0, 0)" data-top-bottom="transform:translate3d(90px, 0, 0)"type="video/mp4" >
+            
+            </video>
         </section>
         <section id="#story" class="story">
             <h2>L'histoire</h2>
@@ -25,18 +28,19 @@ get_header();
             <article id="characters">
                 <div class="main-character">
                     <h3>Les personnages</h3>
-                    <?php
-                    $main_character = $characters_query->posts[0];
+                    <?php get_template_part( 'characters-section' ); ?>
+                   <?php
+                   /* $main_character = $characters_query->posts[0];
                     echo '<figure>';
                     echo get_the_post_thumbnail( $main_character->ID, 'full' );
                     echo '<figcaption>'. $main_character->post_title . '</figcaption>';
                     echo '</figure>';
-                    $characters_query->next_post();
+                    $characters_query->next_post(); */
                     ?>
                 </div>
-                <div class="other-characters">
+              <!--  <div class="other-characters">
                     <?php
-                    while ( $characters_query->have_posts() ) {
+                  /*  while ( $characters_query->have_posts() ) {
                         $characters_query->the_post();
                         echo '<figure>';
                         echo get_the_post_thumbnail( get_the_ID(), 'full' );
@@ -44,14 +48,18 @@ get_header();
                         the_title();
                         echo'</figcaption>';
                         echo '</figure>';
-                    }
+                    }*/
                     ?>
-                </div>
+                </div>-->
             </article>
             <article id="place">
                 <div>
                     <h3>Le Lieu</h3>
                     <p><?php echo get_theme_mod('place'); ?></p>
+                    <div class="container-cloud">
+                        <img class="cloud little" src="<?php echo get_stylesheet_directory_uri() . './images_koukaki/little_cloud.png'; ?> ">
+                        <img class="cloud big" src="<?php echo get_stylesheet_directory_uri() . './images_koukaki/big_cloud.png'; ?> ">
+                    </div>
                 </div>
 
             </article>
@@ -67,6 +75,8 @@ get_header();
             </section>
             <?php get_template_part( 'finale-section' ); ?>
     </main><!-- #main -->
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+   
 <?php
 get_footer();
