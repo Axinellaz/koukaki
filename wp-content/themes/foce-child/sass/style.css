@@ -107,16 +107,17 @@
 
 .cloud {
   position: absolute;
-  top: 15%;
   filter: blur(11px);
 }
 
 .little {
-  left: 40%;
+  top: 37%;
+  right: 35%;
 }
 
 .big {
-  right: 25%;
+  top: 15%;
+  right: 5%;
 }
 
 .container-section-nomination {

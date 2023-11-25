@@ -1,4 +1,4 @@
-
+console.log('wesh')
 console.log("hello, wordl!")
 
 let observer = new IntersectionObserver((entries, observer) => {
@@ -61,3 +61,12 @@ var swiper = new Swiper(".mySwiper", {
         el: ".swiper-pagination",
       },
     });
+
+// S e c t i o n : P l a c e -- S c r o l l  C l o u d 
+
+const cloud = document.querySelectorAll('.cloud');
+console.log(cloud);
+
+window.addEventListener('scroll', () =>{
+    cloud.style.right = (window.scrollY /3) + "px"
+});
