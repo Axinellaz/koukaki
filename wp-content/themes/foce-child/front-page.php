@@ -56,10 +56,10 @@ get_header();
                 <div>
                     <h3>Le Lieu</h3>
                     <p><?php echo get_theme_mod('place'); ?></p>
-                    <div class="container-cloud">
-                        <img class="cloud little" src="<?php echo get_stylesheet_directory_uri() . './images_koukaki/little_cloud.png'; ?> ">
+                    
+                        <img data-0="transform:translateX(0px,)" data-100="transform:translateX(500px)" class="cloud little" src="<?php echo get_stylesheet_directory_uri() . './images_koukaki/little_cloud.png'; ?> ">
                         <img class="cloud big" src="<?php echo get_stylesheet_directory_uri() . './images_koukaki/big_cloud.png'; ?> ">
-                    </div>
+
                 </div>
 
             </article>
@@ -75,6 +75,9 @@ get_header();
             </section>
             <?php get_template_part( 'finale-section' ); ?>
     </main><!-- #main -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
    

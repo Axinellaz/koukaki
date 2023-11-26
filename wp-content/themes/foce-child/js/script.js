@@ -63,10 +63,33 @@ var swiper = new Swiper(".mySwiper", {
     });
 
 // S e c t i o n : P l a c e -- S c r o l l  C l o u d 
-
+/*
 const cloud = document.querySelectorAll('.cloud');
+window.addEventListener('scroll', () =>{
+    
+    let value = window.scrollY;
+    console.log(value)
+   // litleCloud.style.right = (window.scrollY /3) + "px";
+    bigCloud.style.left = value * -1.5 + " px";
+});
 console.log(cloud);
 
 window.addEventListener('scroll', () =>{
     cloud.style.right = (window.scrollY /3) + "px"
-});
+});*//*
+const litleCloud = document.getElementsByClassName('.litle');
+let bigCloud = document.querySelector(' #place .big');
+const containerPlace = document.querySelector('#place');
+let scrollLine = document.querySelector(".scroll")
+
+console.log(containerPlace);
+console.log('ggg');
+console.log(bigCloud);
+*/
+
+gsap.to(".big" , {
+    scrollTrigger : {
+        scrub : 1
+    },
+    x : 500,
+})

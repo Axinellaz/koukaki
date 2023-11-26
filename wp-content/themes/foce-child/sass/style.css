@@ -100,9 +100,14 @@
   width: 100%;
 }
 
-.story #place {
+#place {
   background-image: url("../images_koukaki/Studio_Koukaki-image_place.png");
+  background-position: center bottom;
   position: relative;
+}
+#place .big {
+  top: 15%;
+  left: 0;
 }
 
 .cloud {
@@ -115,11 +120,24 @@
   right: 35%;
 }
 
-.big {
-  top: 15%;
-  right: 5%;
+/*
+.scrollX{
+    opacity: 1;
+    animation: scrollX 2s;
 }
 
+@keyframes scrollX{
+    0%{
+        transform: translateX(-0px);
+    }
+    50%{
+        transform: translateX(-250px);
+    }
+    100%{
+        transform: translateX(-500px);
+    }
+}
+*/
 .container-section-nomination {
   display: flex;
   width: 100%;
