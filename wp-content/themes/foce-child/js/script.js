@@ -1,4 +1,4 @@
-console.log('wesh')
+
 console.log("hello, wordl!")
 
 let observer = new IntersectionObserver((entries, observer) => {
@@ -64,32 +64,46 @@ var swiper = new Swiper(".mySwiper", {
 
 // S e c t i o n : P l a c e -- S c r o l l  C l o u d 
 /*
-const cloud = document.querySelectorAll('.cloud');
-window.addEventListener('scroll', () =>{
-    
-    let value = window.scrollY;
-    console.log(value)
-   // litleCloud.style.right = (window.scrollY /3) + "px";
-    bigCloud.style.left = value * -1.5 + " px";
-});
-console.log(cloud);
-
-window.addEventListener('scroll', () =>{
-    cloud.style.right = (window.scrollY /3) + "px"
-});*//*
-const litleCloud = document.getElementsByClassName('.litle');
-let bigCloud = document.querySelector(' #place .big');
-const containerPlace = document.querySelector('#place');
-let scrollLine = document.querySelector(".scroll")
-
-console.log(containerPlace);
-console.log('ggg');
-console.log(bigCloud);
-*/
-
 gsap.to(".big" , {
     scrollTrigger : {
         scrub : 1
     },
-    x : 500,
+    x : 900,
+});
+
+gsap.to(".little" , {
+    scrollTrigger : {
+        scrub : 1
+    },
+    x : 700,
 })
+*//*
+gsap.registerPlugin(ScrollTrigger);
+
+let tl = gsap.timeline({
+    ScrollTrigger: {
+        trigger: ".place",
+        start: "top top",
+        end: " bottom bottom",
+        scrub: 1,
+
+    }
+}).to(".cloud",{
+    x: 200,
+    xPercent: -100,
+    ease: "none",
+})
+*/
+/*
+let scrollTween = gsap.to( containerPlace, {
+    xPercent: -100 + ( containerPlace.lenght - 1),
+    ease: "none",
+    duration: 6,
+    scrollTrigger:{
+        trigger: ".cloud",
+        pin: true,
+        scrub: true,
+        end: `+=${containerPlace.offWidth}`
+    }
+} );
+*/

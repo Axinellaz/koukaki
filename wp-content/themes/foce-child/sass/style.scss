@@ -35,7 +35,10 @@
 // Rotation fleurs
 
 .story__article::after{
-    animation: rotate 3s linear infinite;
+    animation: rotate 13s linear infinite;
+}
+.story h2::after{
+    animation: rotate 13s linear infinite;
 }
 
 @keyframes rotate {
@@ -113,15 +116,9 @@
     }
 
 // S E C T I O N  : P L A C E 
- #place{
+.story #place{
     background-image: url("../images_koukaki/Studio_Koukaki-image_place.png");
-    background-position: center bottom;
     position: relative;
-    .big{
-    top: 15%;
-    left: 0;
-}
-
 }
 
 .cloud{
@@ -129,12 +126,124 @@
     filter: blur(11px);
 }
 
+.big{
+    top: 15%;
+    left: 0;
+}
+
 .little{
     top:37%;
     right: 35%;
 }
 
+#banner{
+min-height: 606px;
 
+}
+
+// Menu Burger
+#navigation{
+    position: fixed;
+    z-index: 50;
+	background-color: #FFD5A2;
+	width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transform: translateY(-550px);
+    transition: transform 0.3s ;
+    &.active{
+        transform: translate(0);
+    }
+}
+
+.container-menu{
+    width: 100%;
+    height: 90%;
+    padding-top: 80px;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+   // background-color: #FFF5E9;
+}
+ul{
+    list-style: none;  
+}
+
+ul > li{
+    margin-bottom: 30px;
+
+}
+ li > .link__nav{
+    text-decoration: none;
+    font-size: 3rem;
+ }
+
+ .link-footer-menu-nav{
+    font-size: 9px;
+    margin-bottom: 10px;
+    text-decoration: none;
+ }
+
+  li > .link__nav:hover{
+     text-shadow: #ff9100 5px 5px 7px;
+     color: #000;
+  }
+
+.title-nav-fermer{
+    z-index: 10000;
+    position: fixed;
+    top: 7%;
+    left: 39%;
+    font-family: "Quicksand", sans-serif;
+	font-size: 21.5px;
+
+} 
+.nav-toggle{
+    position: fixed;
+    z-index: 10000;
+    top: 40px;
+    right: 30px;
+    width: 30px;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+    background: transparent;
+
+} 
+
+.nav-toggle.active .l1{
+    transform: translateY(0px) rotate(135deg);
+} 
+
+.nav-toggle.active .l3{
+    transform: translateY(0px) rotate(-135deg);
+} 
+.nav-toggle.active .l2{
+    opacity: 0;
+} 
+
+
+.line{
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #000;
+    transition: transform 0.3s ease-out, 
+    opacity 0.1s ease-out;
+    &.l1{
+        transform: translateY(-10px);
+    }   
+    &.l3{
+        transform: translateY(10px);
+    }
+    }
 /*
 .scrollX{
     opacity: 1;
@@ -154,18 +263,28 @@
 }
 */
 // S E C T I O N  :  N O M I N A T I O N 
+.site-footer{
+    display: block;
+    padding-top: 18em;
+    padding-bottom: 0em;
+    ul {
+    padding: 50px 0;
+    margin: 0;
+}
+}
+
 
 .container-section-nomination{
     display: flex;
     width: 100%;
     margin: 40px 0 40px 0;
-    justify-content: center;
+    justify-content: space-around;
     position: relative;
     .back-nomination{
-        z-index: 0;
+        z-index: -1;
         position: absolute;
-        top: -30%;
-        left: 7%;
+        top: -35%;
+        left: 10%;
     .txt__back-nomination{
         z-index: 5;
     }

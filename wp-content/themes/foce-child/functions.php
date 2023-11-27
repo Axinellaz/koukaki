@@ -9,6 +9,9 @@ function theme_enqueue_styles() {
 // Déclarer un autre fichier JS
 	wp_enqueue_script( 'js-foce-child', get_stylesheet_directory_uri() . '/js/script.js', array( 'jquery' ), 
     '3.4.1',true);
+// Déclarer le fichier JS menu burger
+	wp_enqueue_script( 'menu-burger.js', get_stylesheet_directory_uri() . '/js/menu-burger.js', array( 'jquery' ), 
+    '3.4.1',true);
 }
 
 // Get customizer options form parent theme
