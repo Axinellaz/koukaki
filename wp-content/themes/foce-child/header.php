@@ -4,6 +4,7 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
 	<?php wp_head(); ?>
 </head>
@@ -26,6 +27,17 @@
               <li><a class="link__nav" href="#place">Lieu</a></li>
               <li><a class="link__nav" href="#studio">Studio Koukaki</a></li>
               <li><a class=" link-footer-menu-nav" href="#studio">Studio Koukaki</a></li>
+              <div class="container__nav-imgs">
+                <img  class="img__nav-cat-black" src="<?php echo get_stylesheet_directory_uri() . './img-menu-burger/cat-black.png'; ?> ">
+                <img  class="img__nav-cat-blue" src="<?php echo get_stylesheet_directory_uri() . './img-menu-burger/cat-blue.png'; ?> ">
+                <img  class="img__nav-cat-orange" src="<?php echo get_stylesheet_directory_uri() . './img-menu-burger/cat-orange.png'; ?> ">
+                <img  class="img__nav-Flower" src="<?php echo get_stylesheet_directory_uri() . './img-menu-burger/Flower.png'; ?> ">
+                <img  class="img__nav-Hibiscus" src="<?php echo get_stylesheet_directory_uri() . './img-menu-burger/Hibiscus.png'; ?> ">
+                <img  class="img__nav-logo" src="<?php echo get_stylesheet_directory_uri() . './img-menu-burger/logo-menu-burger.png'; ?> ">
+                <img  class="img__nav-Orchid" src="<?php echo get_stylesheet_directory_uri() . './img-menu-burger/Orchid.png'; ?> ">
+                <img  class="img__nav-Ramdom-flower" src="<?php echo get_stylesheet_directory_uri() . './img-menu-burger/Random-Flower.png'; ?> ">
+                <img  class="img__nav-sunflower" src="<?php echo get_stylesheet_directory_uri() . './img-menu-burger/Sunflower.png'; ?> ">
+              </div>
           </ul> 
         </div>
 

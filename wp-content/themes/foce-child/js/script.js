@@ -43,32 +43,31 @@ var s = skrollr.init();
 // S e c t i o n : L e s  P e r s o n n a g e s -- S l i d e r
 
 var swiper = new Swiper(".mySwiper", {
-      effect: "coverflow",
+      
       grabCursor: true,
       centeredSlides: true,
       slidesPerView: "auto",
        autoplay: {
             delay: 5000,
        },
-      coverflowEffect: {
-        rotate: 50,
-        stretch: 0,
-        depth: 100,
-        modifier: 1,
-        slideShadows: true,
-      },
       pagination: {
         el: ".swiper-pagination",
       },
     });
 
 // S e c t i o n : P l a c e -- S c r o l l  C l o u d 
+
+console.log("putaiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiin")
+
+AOS.init();
+
 /*
 gsap.to(".big" , {
     scrollTrigger : {
         scrub : 1
     },
     x : 900,
+    direction: 1
 });
 
 gsap.to(".little" , {
@@ -77,7 +76,7 @@ gsap.to(".little" , {
     },
     x : 700,
 })
-*//*
+/*
 gsap.registerPlugin(ScrollTrigger);
 
 let tl = gsap.timeline({

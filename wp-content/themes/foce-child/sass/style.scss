@@ -1,3 +1,7 @@
+
+
+// Animation : Sections 
+
 .scrolled-top{
      opacity: 0;
     transform: translateY(50px);
@@ -69,14 +73,14 @@
 // S E C T I O N   :   H E A D E R
 
 
-    #background-video{
-        z-index: -1;
-        object-fit: cover;
-        position: fixed;
-        top: 0;
-        right: 0;
-        bottom: 0;
-    }
+#background-video{
+    z-index: -1;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
 
 
 /*   Animation : Flottement Titre Header   */
@@ -119,22 +123,34 @@
 .story #place{
     background-image: url("../images_koukaki/Studio_Koukaki-image_place.png");
     position: relative;
+    width: 100%;
+    
+    
+    .container{
+        padding-top: 11em;
+        position: relative;
+        .slider__inner--place{
+            
+        }
+        
+
+    }
 }
 
 .cloud{
     position: absolute;
     filter: blur(11px);
+    &.big{
+        top: 70px;
+        right: -679px;
+    }
+    &.little{
+        top: 336px;
+        right: -310px;
+    }
 }
 
-.big{
-    top: 15%;
-    left: 0;
-}
 
-.little{
-    top:37%;
-    right: 35%;
-}
 
 #banner{
 min-height: 606px;
@@ -169,7 +185,64 @@ min-height: 606px;
     flex-direction: column;
     justify-content: center;
     text-align: center;
-   // background-color: #FFF5E9;
+    background-color: #FFF5E9;
+    overflow: hidden;
+     
+}
+
+.container__nav-imgs > img{
+    position: absolute;
+    width: 90px;
+    height: 90px;
+}
+
+.container__nav-imgs{
+    .img__nav-cat-black{
+        top: 50%;
+        right: 30%;
+    }
+    .img__nav-cat-blue{
+        top: 12%;
+        left: 30%;
+    }
+    .img__nav-cat-orange{
+        bottom: 10%;
+        left: 10%;
+        width: 60px;
+        height: 60px;
+    }
+    .img__nav-Flower{
+        bottom: 45%;
+        left: 30%;
+        height: 40px;
+        width: 40px;
+    }
+    .img__nav-Hibiscus{
+        bottom: 3%;
+        right: 0;
+        height: 250px;
+        width: 250px;
+    }
+    .img__nav-logo{
+        top: 5%;
+        left: 50%;
+    }
+    .img__nav-Orchid{
+        top: 7%;
+        left: -2%;
+    }
+    .img__nav-Ramdom-flower{
+        top: 40%;
+        right: -1%;
+        height: 50px;
+        width: 50px;
+    }
+    .img__nav-sunflower{
+        top: 5%;
+        right: 20%;
+        height: 140px;
+        width: 140px;
+    }
 }
 ul{
     list-style: none;  
@@ -264,11 +337,14 @@ ul > li{
 */
 // S E C T I O N  :  N O M I N A T I O N 
 .site-footer{
-    display: block;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     padding-top: 18em;
     padding-bottom: 0em;
     ul {
-    padding: 50px 0;
+    padding: 77px 0 0 0;
     margin: 0;
 }
 }
@@ -277,9 +353,12 @@ ul > li{
 .container-section-nomination{
     display: flex;
     width: 100%;
-    margin: 40px 0 40px 0;
-    justify-content: space-around;
+    margin: 0px 0 275px 0;
+    justify-content: center;
     position: relative;
+    .img-oscars{
+        margin: 0 0 0 60px;
+    }
     .back-nomination{
         z-index: -1;
         position: absolute;

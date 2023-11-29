@@ -34,22 +34,14 @@ get_header();
 
             </article>
             <article id="place" class="place">
-                <div>
+                <div class="container" data-aos="fade-left" >
                     <h3>Le Lieu</h3>
                     <p><?php echo get_theme_mod('place'); ?></p>
-                    
-                    
-                    
-                        
-                        <img class="cloud big" src="<?php echo get_stylesheet_directory_uri() . './images_koukaki/big_cloud.png'; ?> ">
-                    
-
-                    
-                    
+                        <div  class="slider__inner--place">
+                        <img  class="cloud big" src="<?php echo get_stylesheet_directory_uri() . './images_koukaki/big_cloud.png'; ?> ">
                         <img class="cloud little" src="<?php echo get_stylesheet_directory_uri() . './images_koukaki/little_cloud.png'; ?> ">
-                    
-                  
-
+                        
+                        </div>
                 </div>
 
             </article>
@@ -65,6 +57,11 @@ get_header();
             </section>
             
     </main><!-- #main -->
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
