@@ -57,10 +57,18 @@ var swiper = new Swiper(".mySwiper", {
 
 // S e c t i o n : P l a c e -- S c r o l l  C l o u d 
 
-console.log("putaiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiin")
+console.log("respire ")
 
-AOS.init();
+      // initialise parroller.js et définit les attributs pour les éléments sélectionnés
+                    $(".paroller, [data-paroller-factor]").paroller({
+                        facteur : '0,3', // multiplicateur pour la vitesse de défilement et le décalage
+                        factorXs : '0,1', // multiplicateur pour la vitesse de défilement et le décalage
+                        tapez : 'premier plan', // arrière-plan, premier plan
+                        direction : 'horizontale', // verticale, horizontale
+                        transition : 'transformation 0,2 s facile' // transition CSS
+                    });
 
+                    console.log("jejejejejej")
 /*
 gsap.to(".big" , {
     scrollTrigger : {

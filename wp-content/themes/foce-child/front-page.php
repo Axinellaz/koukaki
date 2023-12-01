@@ -34,11 +34,17 @@ get_header();
 
             </article>
             <article id="place" class="place">
-                <div class="container" data-aos="fade-left" >
+                <div class="container">
                     <h3>Le Lieu</h3>
                     <p><?php echo get_theme_mod('place'); ?></p>
                         <div  class="slider__inner--place">
-                        <img  class="cloud big" src="<?php echo get_stylesheet_directory_uri() . './images_koukaki/big_cloud.png'; ?> ">
+                        <img  class="cloud big my-paroller" 
+                            data-paroller-factor="0.4" 
+                            data-paroller-factor-xs="0.2" 
+                            data-paroller-factor-sm="0.3" 
+                            data-paroller-type="foreground" 
+                            data-paroller-direction="horizontal"
+                         <?php echo get_stylesheet_directory_uri() . './images_koukaki/big_cloud.png'; ?> >
                         <img class="cloud little" src="<?php echo get_stylesheet_directory_uri() . './images_koukaki/little_cloud.png'; ?> ">
                         
                         </div>
@@ -62,7 +68,12 @@ get_header();
     <script>
         AOS.init();
     </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+<!-- Parallaxe pour nuages -->
+    
+    <script src="
+https://cdn.jsdelivr.net/npm/paroller.js@1.4.7/dist/jquery.paroller.min.js
+"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>

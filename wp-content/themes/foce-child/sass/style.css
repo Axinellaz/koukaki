@@ -106,13 +106,20 @@
 
 .story #place {
   background-image: url("../images_koukaki/Studio_Koukaki-image_place.png");
+  background-attachment: fixed;
   position: relative;
   width: 100%;
+  min-height: 100vh;
 }
 .story #place .container {
   padding-top: 11em;
   position: relative;
 }
+.story #place .container .parallax-window {
+  min-height: 400px;
+  background: transparent;
+}
+
 .cloud {
   position: absolute;
   filter: blur(11px);
@@ -167,51 +174,68 @@
   height: 90px;
 }
 
+.container__nav-imgs {
+  opacity: 0;
+}
 .container__nav-imgs .img__nav-cat-black {
   top: 50%;
-  right: 30%;
+  right: 22%;
+  animation: floating 5s ease-in-out 2s infinite;
 }
 .container__nav-imgs .img__nav-cat-blue {
   top: 12%;
   left: 30%;
+  animation: floating 5s ease-in-out 2s infinite;
 }
 .container__nav-imgs .img__nav-cat-orange {
   bottom: 10%;
   left: 10%;
   width: 60px;
   height: 60px;
+  animation: floating 5s ease-in-out 2s infinite;
 }
 .container__nav-imgs .img__nav-Flower {
   bottom: 45%;
   left: 30%;
   height: 40px;
   width: 40px;
+  animation: rotate 13s linear infinite;
 }
 .container__nav-imgs .img__nav-Hibiscus {
-  bottom: 3%;
-  right: 0;
+  bottom: -15%;
+  right: -9%;
   height: 250px;
   width: 250px;
+  animation: rotate 13s linear infinite;
 }
 .container__nav-imgs .img__nav-logo {
-  top: 5%;
-  left: 50%;
+  top: 0%;
+  left: 49%;
+  width: 100px;
 }
 .container__nav-imgs .img__nav-Orchid {
   top: 7%;
-  left: -2%;
+  left: -31px;
+  height: 100px;
+  animation: rotate 13s linear infinite;
 }
 .container__nav-imgs .img__nav-Ramdom-flower {
-  top: 40%;
-  right: -1%;
-  height: 50px;
+  top: 35%;
+  right: -15px;
+  height: 60px;
   width: 50px;
+  animation: rotate 13s linear infinite;
 }
 .container__nav-imgs .img__nav-sunflower {
   top: 5%;
   right: 20%;
   height: 140px;
   width: 140px;
+  animation: rotate 13s linear infinite;
+}
+
+.container__nav-imgs.active {
+  opacity: 1;
 }
 
 ul {
@@ -316,23 +340,31 @@ li > .link__nav:hover {
   padding: 77px 0 0 0;
   margin: 0;
 }
+.site-footer::after {
+  bottom: 47.8em;
+}
+.site-footer::before {
+  left: 8rem;
+  top: 8rem;
+}
 
 .container-section-nomination {
   display: flex;
   width: 100%;
   margin: 0px 0 275px 0;
   justify-content: center;
+  align-items: center;
   position: relative;
 }
 .container-section-nomination .img-oscars {
   margin: 0 0 0 60px;
+  width: 235px;
+  height: 121px;
 }
-.container-section-nomination .back-nomination {
-  z-index: -1;
-  position: absolute;
-  top: -35%;
-  left: 10%;
-}
-.container-section-nomination .back-nomination .txt__back-nomination {
-  z-index: 5;
+.container-section-nomination .txt__back-nomination {
+  background-image: url("../img-festival/back-orange-nomination.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 50px;
 }/*# sourceMappingURL=style.css.map */

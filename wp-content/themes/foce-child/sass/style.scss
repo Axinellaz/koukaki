@@ -120,17 +120,19 @@
     }
 
 // S E C T I O N  : P L A C E 
+
 .story #place{
     background-image: url("../images_koukaki/Studio_Koukaki-image_place.png");
+    background-attachment: fixed;
     position: relative;
     width: 100%;
-    
-    
+    min-height: 100vh;
     .container{
         padding-top: 11em;
         position: relative;
-        .slider__inner--place{
-            
+        .parallax-window {
+	        min-height: 400px;
+	        background: transparent;
         }
         
 
@@ -143,6 +145,7 @@
     &.big{
         top: 70px;
         right: -679px;
+        
     }
     &.little{
         top: 336px;
@@ -157,7 +160,8 @@ min-height: 606px;
 
 }
 
-// Menu Burger
+//    S E C T I O N : N A V B A R  
+
 #navigation{
     position: fixed;
     z-index: 50;
@@ -190,6 +194,7 @@ min-height: 606px;
      
 }
 
+//  I m a g e s   M e n u B u r g e r 
 .container__nav-imgs > img{
     position: absolute;
     width: 90px;
@@ -197,53 +202,71 @@ min-height: 606px;
 }
 
 .container__nav-imgs{
+    opacity: 0;
     .img__nav-cat-black{
         top: 50%;
-        right: 30%;
+        right: 22%;
+        animation: floating 5s ease-in-out 2s infinite;
     }
     .img__nav-cat-blue{
         top: 12%;
         left: 30%;
+        animation: floating 5s ease-in-out 2s infinite;
     }
     .img__nav-cat-orange{
         bottom: 10%;
         left: 10%;
         width: 60px;
         height: 60px;
+        animation: floating 5s ease-in-out 2s infinite;
     }
     .img__nav-Flower{
         bottom: 45%;
         left: 30%;
         height: 40px;
         width: 40px;
+        animation: rotate 13s linear infinite;
     }
     .img__nav-Hibiscus{
-        bottom: 3%;
-        right: 0;
+        bottom: -15%;
+        right: -9%;
         height: 250px;
         width: 250px;
+        animation: rotate 13s linear infinite;
     }
     .img__nav-logo{
-        top: 5%;
-        left: 50%;
+        top: 0%;
+        left: 49%;
+        width: 100px ;
     }
     .img__nav-Orchid{
         top: 7%;
-        left: -2%;
+        left: -31px;
+        height: 100px;
+        animation: rotate 13s linear infinite;
     }
     .img__nav-Ramdom-flower{
-        top: 40%;
-        right: -1%;
-        height: 50px;
+        top: 35%;
+        right: -15px;
+        height: 60px;
         width: 50px;
+        animation: rotate 13s linear infinite;
     }
     .img__nav-sunflower{
         top: 5%;
         right: 20%;
         height: 140px;
         width: 140px;
+        animation: rotate 13s linear infinite;
     }
 }
+
+ // C l a s s JS - T o g g l e  I m a g e s 
+.container__nav-imgs.active{
+    opacity: 1;
+}
+
+// M e n u (ul)   d u   M e n u B u r g e r
 ul{
     list-style: none;  
 }
@@ -277,6 +300,8 @@ ul > li{
 	font-size: 21.5px;
 
 } 
+
+// B o u t o n  d ' o u v e r t u r e - f e r m e r - M e n u B u r g e r 
 .nav-toggle{
     position: fixed;
     z-index: 10000;
@@ -346,7 +371,14 @@ ul > li{
     ul {
     padding: 77px 0 0 0;
     margin: 0;
-}
+    }
+    &::after{
+            bottom: 47.8em;
+    }
+    &::before{
+        left: 8rem;
+        top: 8rem;
+    }
 }
 
 
@@ -355,18 +387,21 @@ ul > li{
     width: 100%;
     margin: 0px 0 275px 0;
     justify-content: center;
+    align-items: center;
     position: relative;
     .img-oscars{
         margin: 0 0 0 60px;
+        width: 235px;
+        height: 121px;
     }
-    .back-nomination{
-        z-index: -1;
-        position: absolute;
-        top: -35%;
-        left: 10%;
+
     .txt__back-nomination{
-        z-index: 5;
-    }
+        
+        background-image:  url("../img-festival/back-orange-nomination.png"); 
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 50px;
     }
         
     
