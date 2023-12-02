@@ -55,6 +55,52 @@ var swiper = new Swiper(".mySwiper", {
       },
     });
 
+// A n i m a t i o n s  D e s  T i t r e s 
+$(document).on("scroll", function(){
+    let pageTop = $(document).scrollTop();
+    let pageBottom = pageTop + $(window).height();
+    let titlesAnim = $(".scrolled-title");
+        function animationTxt(){
+            $(titlesAnim).fadein()       
+        
+        }
+
+    
+        
+
+            if ($(titlesAnim).position().top < pageBottom) {
+                    animationTxt()
+
+    } else {
+      
+    }
+});
+
+
+
+
+
+
+
+
+
+/*
+$(document).on("scroll", function() {
+  let pageTop = $(document).scrollTop();
+  let pageBottom = pageTop + $(window).height();
+  let titlesAnim = $(".scrolled-title");
+
+  for (var i = 0; i < titlesAnim.length; i++) {
+    let titlesAnim = titlesAnim[i];
+
+    if ($(titlesAnim).position().top < pageBottom) {
+      $(titlesAnim).addClass("visible");
+    } else {
+      $(titlesAnim).removeClass("visible");
+    }
+  }
+});
+
 // S e c t i o n : P l a c e -- S c r o l l  C l o u d 
 
 console.log("respire ")

@@ -4,8 +4,12 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
+<<<<<<< HEAD
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     
+=======
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+>>>>>>> 4df99a307537c2e0f30ed70f30435fdd62fef858
 
 	<?php wp_head(); ?>
 </head>
@@ -16,11 +20,8 @@
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'foce' ); ?></a>
 
      <header class="header site-header" id="masthead" >
-
       <nav id="navigation">
  
-        
-
        <div class="container-menu ">
           <ul>
               <li><a class="link__nav" href="#story">Histoire</a></li>
@@ -43,7 +44,8 @@
         </div>
 
       </nav>
-        <a class="title-nav-fermer" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+
+      <a class="title-nav-fermer" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
       <button class="nav-toggle" type="button" aria-label="toggle curtain navigation">
         <span class="line l1"></span>
         <span class="line l2"></span>

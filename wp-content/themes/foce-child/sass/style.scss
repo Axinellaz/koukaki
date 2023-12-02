@@ -1,6 +1,183 @@
 
+//    S E C T I O N : N A V B A R  
+#navigation{
+    position: fixed;
+    z-index: 50;
+	background-color: #FFD5A2;
+	width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transform: translateY(-550px);
+    transition: transform 0.3s ;
+    &.active{
+        transform: translate(0);
+    }
+}
 
-// Animation : Sections 
+.title-nav-fermer{
+    z-index: 10000;
+    position: fixed;
+    top: 7%;
+    left: 39%;
+    font-family: "Quicksand", sans-serif;
+	font-size: 21.5px;
+
+} 
+.container-menu{
+    width: 100%;
+    height: 90%;
+    padding-top: 80px;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-color: #FFF5E9;
+     
+}
+//  I m a g e s   M e n u B u r g e r 
+.container__nav-imgs > img{
+    position: absolute;
+    width: 90px;
+    height: 90px;
+}
+
+.container__nav-imgs{
+    opacity: 0;
+    .img__nav-cat-black{
+        top: 50%;
+        right: 22%;
+        animation: floating 5s ease-in-out 2s infinite;
+    }
+    .img__nav-cat-blue{
+        top: 12%;
+        left: 30%;
+        animation: floating 5s ease-in-out 2s infinite;
+    }
+    .img__nav-cat-orange{
+        bottom: 10%;
+        left: 10%;
+        width: 60px;
+        height: 60px;
+        animation: floating 5s ease-in-out 2s infinite;
+    }
+    .img__nav-Flower{
+        bottom: 45%;
+        left: 30%;
+        height: 40px;
+        width: 40px;
+        animation: rotate 13s linear infinite;
+    }
+    .img__nav-Hibiscus{
+        bottom: -15%;
+        right: -9%;
+        height: 250px;
+        width: 250px;
+        animation: rotate 13s linear infinite;
+    }
+    .img__nav-logo{
+        top: 0%;
+        left: 49%;
+        width: 100px ;
+    }
+    .img__nav-Orchid{
+        top: 7%;
+        left: -31px;
+        height: 100px;
+        animation: rotate 13s linear infinite;
+    }
+    .img__nav-Ramdom-flower{
+        top: 35%;
+        right: -15px;
+        height: 60px;
+        width: 50px;
+        animation: rotate 13s linear infinite;
+    }
+    .img__nav-sunflower{
+        top: 5%;
+        right: 20%;
+        height: 140px;
+        width: 140px;
+        animation: rotate 13s linear infinite;
+    }
+}
+ // C l a s s JS - T o g g l e  I m a g e s 
+.container__nav-imgs.active{
+    opacity: 1;
+}
+// M e n u (ul)   d u   M e n u B u r g e r
+ul{
+    list-style: none;  
+}
+
+ul > li{
+    margin-bottom: 30px;
+
+}
+ li > .link__nav{
+    text-decoration: none;
+    font-size: 3rem;
+ }
+
+ .link-footer-menu-nav{
+    font-size: 9px;
+    margin-bottom: 10px;
+    text-decoration: none;
+ }
+
+  li > .link__nav:hover{
+     text-shadow: #ff9100 5px 5px 7px;
+     color: #000;
+  }
+
+// B o u t o n  d ' o u v e r t u r e - f e r m e r - M e n u B u r g e r 
+
+.nav-toggle{
+    position: fixed;
+    z-index: 10000;
+    top: 40px;
+    right: 30px;
+    width: 30px;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+    background: transparent;
+} 
+
+.nav-toggle.active .l1{
+    transform: translateY(0px) rotate(135deg);
+} 
+
+.nav-toggle.active .l3{
+    transform: translateY(0px) rotate(-135deg);
+} 
+.nav-toggle.active .l2{
+    opacity: 0;
+} 
+
+
+.line{
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #000;
+    transition: transform 0.3s ease-out, 
+    opacity 0.1s ease-out;
+    &.l1{
+        transform: translateY(-10px);
+    }   
+    &.l3{
+        transform: translateY(10px);
+    }
+    }
+
+
+//      A N I M A T I O N : S E C T I O N S 
 
 .scrolled-top{
      opacity: 0;
@@ -36,7 +213,7 @@
     }
 }
 
-// Rotation fleurs
+//   A N I M A T I O N : R O T A T I O N  F L E U R S 
 
 .story__article::after{
     animation: rotate 13s linear infinite;
@@ -51,28 +228,94 @@
     }
 }
 
-//     ANIMATION  TITRE 
-/*
-.scrolled-title{
-    opacity: 0;
-    animation: scroll-title 2s;
+//   A N I M A T I O N : D E S  T I T R E S
+.back-title{
+    color: #FFF5E9;
+	font-size: 3.2rem;
+	background-image: url("../images_koukaki/purple_title_bg.png");
+	background-color: #FFF5E9;
+	background-repeat: no-repeat;
+	background-size: contain;
+	padding: 1em 2em;
+	margin: 0;
+	background-position: center;
+	text-align: center;
+    h2{
+        color: #fff;
+        .anim-title-1{
+            opacity: 0;
+            animation: scroll-title-1 10s;
+            animation-delay: 3s;
+        }
+        .anim-title-2{
+            opacity: 0;
+            animation: scroll-title-2 10s;
+            animation-delay: 5s;
+            transform: t;
+        }
+    }
 }
 
-@keyframes scroll-title {
+
+
+@keyframes scroll-title-1 {
     0%{
         opacity: 0;
-        transform: translate(0px);
+        transform: translate3d( 0,30vh, -15px );
+    }
+    50%{
+        opacity: 1;
+        transform: translate3d( 0,10vh, -15px );
     }
     100%{
         opacity: 1;
-        transform: translate(60px)
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes scroll-title-2 {
+    0%{
+        opacity: 0;
+        transform: translateY( -30vh);
+    }
+    50%{
+        opacity: 1;
+        transform: translateY( -15vh);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/*
+.scrolled-title{
+    opacity: 0;
+    transform: translate(0, 10vh);
+    &.visible{
+        opacity: 1;
+        transform: translate(0, 0);
+        animation: scroll-title 2s; 
+    }
+}
+/*
+@keyframes scroll-title {
+    0%{
+        opacity: 0;
+        transform: translate(0px, 10vh);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0, 0);
     }
 }
 */
 
 // S E C T I O N   :   H E A D E R
 
-
+#banner{
+min-height: 606px;
+}
 #background-video{
     z-index: -1;
     object-fit: cover;
@@ -81,6 +324,8 @@
     right: 0;
     bottom: 0;
 }
+
+
 
 
 /*   Animation : Flottement Titre Header   */
@@ -155,6 +400,7 @@
 
 
 
+<<<<<<< HEAD
 #banner{
 min-height: 606px;
 
@@ -342,6 +588,8 @@ ul > li{
         transform: translateY(10px);
     }
     }
+=======
+>>>>>>> 4df99a307537c2e0f30ed70f30435fdd62fef858
 /*
 .scrollX{
     opacity: 1;
